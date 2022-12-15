@@ -13,6 +13,7 @@ extension UIStoryboard {
     
     enum Storyboard: String {
         case main
+        case dashboard
         var filename: String {
             return rawValue.capitalized
         }

@@ -36,6 +36,10 @@ class LoginViewModel: BaseViewModel {
             self?.countriesList.accept(countryList.countriesList ?? [])
         }
     }
+    
+    func isValidForm() -> Bool {
+        return (email.value.isValidEmail() && password.value.isValidPassword() && selectedCountry.value.name != nil)
+    }
         
     func getCountries(completion: @escaping(CountriesList?) -> Void) {
         readFromFile(fileName: "countries", completion: completion)

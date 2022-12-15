@@ -37,6 +37,13 @@
 		CAE6189B294B81E1006F08B6 /* CountriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE6189A294B81E1006F08B6 /* CountriesModel.swift */; };
 		CAE6189E294B872A006F08B6 /* SelectCountriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE6189D294B872A006F08B6 /* SelectCountriesVC.swift */; };
 		CAE618A1294B89E9006F08B6 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE618A0294B89E9006F08B6 /* CountryCell.swift */; };
+		CAE618A3294B9C1E006F08B6 /* TransitionSubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE618A2294B9C1E006F08B6 /* TransitionSubmitButton.swift */; };
+		CAE618A6294B9C55006F08B6 /* SpinerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE618A5294B9C55006F08B6 /* SpinerLayer.swift */; };
+		CAE618A8294B9C7B006F08B6 /* CGRect+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE618A7294B9C7B006F08B6 /* CGRect+EXT.swift */; };
+		CAE618AA294B9C9C006F08B6 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE618A9294B9C9C006F08B6 /* Timer.swift */; };
+		CAE618AC294B9CBE006F08B6 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE618AB294B9CBE006F08B6 /* FadeTransition.swift */; };
+		CAE618AF294BA213006F08B6 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE618AE294BA213006F08B6 /* DashboardVC.swift */; };
+		CAE618B1294BA230006F08B6 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAE618B0294BA230006F08B6 /* Dashboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +103,13 @@
 		CAE6189A294B81E1006F08B6 /* CountriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesModel.swift; sourceTree = "<group>"; };
 		CAE6189D294B872A006F08B6 /* SelectCountriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCountriesVC.swift; sourceTree = "<group>"; };
 		CAE618A0294B89E9006F08B6 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
+		CAE618A2294B9C1E006F08B6 /* TransitionSubmitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionSubmitButton.swift; sourceTree = "<group>"; };
+		CAE618A5294B9C55006F08B6 /* SpinerLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinerLayer.swift; sourceTree = "<group>"; };
+		CAE618A7294B9C7B006F08B6 /* CGRect+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+EXT.swift"; sourceTree = "<group>"; };
+		CAE618A9294B9C9C006F08B6 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		CAE618AB294B9CBE006F08B6 /* FadeTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
+		CAE618AE294BA213006F08B6 /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
+		CAE618B0294BA230006F08B6 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		D8DE12518A08D0EC1D4BFB80 /* Pods-ChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-ChallengeTests/Pods-ChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -214,6 +228,7 @@
 			children = (
 				CACFB6D1294B45EF00013C4C /* Main.storyboard */,
 				CACFB6D6294B45F000013C4C /* LaunchScreen.storyboard */,
+				CAE618B0294BA230006F08B6 /* Dashboard.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -221,6 +236,7 @@
 		CACFB6FC294B480500013C4C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CAE618AD294BA1FC006F08B6 /* Dashboard */,
 				CAE6189C294B870D006F08B6 /* Login */,
 			);
 			path = ViewControllers;
@@ -279,6 +295,8 @@
 				CACFB707294B567100013C4C /* UITextField+EXT.swift */,
 				CACFB709294B60DE00013C4C /* UIStoryBoard+EXT.swift */,
 				CACFB71F294B7A1300013C4C /* UIString+EXT.swift */,
+				CAE618A7294B9C7B006F08B6 /* CGRect+EXT.swift */,
+				CAE618A9294B9C9C006F08B6 /* Timer.swift */,
 			);
 			path = Extenstion;
 			sourceTree = "<group>";
@@ -286,6 +304,7 @@
 		CACFB704294B51EA00013C4C /* Custom Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CAE618A4294B9C3C006F08B6 /* TransitionBtn */,
 				CACFB705294B520100013C4C /* RoundedView.swift */,
 			);
 			path = "Custom Classes";
@@ -307,6 +326,24 @@
 				CAE618A0294B89E9006F08B6 /* CountryCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		CAE618A4294B9C3C006F08B6 /* TransitionBtn */ = {
+			isa = PBXGroup;
+			children = (
+				CAE618A2294B9C1E006F08B6 /* TransitionSubmitButton.swift */,
+				CAE618A5294B9C55006F08B6 /* SpinerLayer.swift */,
+				CAE618AB294B9CBE006F08B6 /* FadeTransition.swift */,
+			);
+			path = TransitionBtn;
+			sourceTree = "<group>";
+		};
+		CAE618AD294BA1FC006F08B6 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				CAE618AE294BA213006F08B6 /* DashboardVC.swift */,
+			);
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CACFB6D8294B45F000013C4C /* LaunchScreen.storyboard in Resources */,
+				CAE618B1294BA230006F08B6 /* Dashboard.storyboard in Resources */,
 				CACFB6D5294B45F000013C4C /* Assets.xcassets in Resources */,
 				CAE61899294B817B006F08B6 /* countries.json in Resources */,
 				CACFB6D3294B45EF00013C4C /* Main.storyboard in Resources */,
@@ -550,10 +588,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CACFB706294B520100013C4C /* RoundedView.swift in Sources */,
+				CAE618AF294BA213006F08B6 /* DashboardVC.swift in Sources */,
+				CAE618AC294B9CBE006F08B6 /* FadeTransition.swift in Sources */,
 				CACFB708294B567100013C4C /* UITextField+EXT.swift in Sources */,
 				CACFB714294B68C400013C4C /* ConsoleLog.swift in Sources */,
 				CACFB712294B643C00013C4C /* ApiManager.swift in Sources */,
 				CACFB71E294B6E6E00013C4C /* LoginViewModel.swift in Sources */,
+				CAE618A3294B9C1E006F08B6 /* TransitionSubmitButton.swift in Sources */,
+				CAE618A6294B9C55006F08B6 /* SpinerLayer.swift in Sources */,
 				CACFB6D0294B45EF00013C4C /* LoginVC.swift in Sources */,
 				CACFB71C294B6E4800013C4C /* LoginRepository.swift in Sources */,
 				CACFB710294B63F000013C4C /* BaseRepository.swift in Sources */,
@@ -561,6 +603,8 @@
 				CAE6189E294B872A006F08B6 /* SelectCountriesVC.swift in Sources */,
 				CACFB70A294B60DE00013C4C /* UIStoryBoard+EXT.swift in Sources */,
 				CAE6189B294B81E1006F08B6 /* CountriesModel.swift in Sources */,
+				CAE618A8294B9C7B006F08B6 /* CGRect+EXT.swift in Sources */,
+				CAE618AA294B9C9C006F08B6 /* Timer.swift in Sources */,
 				CAE618A1294B89E9006F08B6 /* CountryCell.swift in Sources */,
 				CACFB720294B7A1300013C4C /* UIString+EXT.swift in Sources */,
 				CACFB71A294B6A0D00013C4C /* PreferenceManager.swift in Sources */,

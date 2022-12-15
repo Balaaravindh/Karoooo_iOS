@@ -11,18 +11,18 @@ import RxSwift
 
 class LoginVC: BaseViewController {
     
-    @IBOutlet weak var countryView: RoundedView!
+    @IBOutlet weak var countryView: UIView!
     @IBOutlet weak var countryTextFeild: UITextField!
     
-    @IBOutlet weak var emailIDView: RoundedView!
+    @IBOutlet weak var emailIDView: UIView!
     @IBOutlet weak var emailIDTextFeild: UITextField!
     
-    @IBOutlet weak var passwordView: RoundedView!
+    @IBOutlet weak var passwordView: UIView!
     @IBOutlet weak var passwordTextFeild: UITextField!
     @IBOutlet weak var passwordEyeImageView: UIImageView!
     
     @IBOutlet weak var submitBtnBG: UIView!
-    @IBOutlet weak var submitBtn: UIButton!
+    var submitBtn: TransitionSubmitButton!
     
     private var loginModel: LoginViewModel!
     
@@ -32,8 +32,8 @@ class LoginVC: BaseViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        submitBtnBG.layer.cornerRadius = submitBtnBG.frame.height / 2
+                
+        buttonCreate()
         
         emailIDView.layer.borderColor = UIColor.white.cgColor
         emailIDView.layer.borderWidth = 1
@@ -70,11 +70,26 @@ class LoginVC: BaseViewController {
         
         //Button Enable/Disable
         Observable.combineLatest(self.loginModel.email, self.loginModel.password, self.loginModel.selectedCountry, resultSelector: { [weak self] emailStr, passwordStr, selectedCountryData in
-            let isValid = emailStr.trim().isValidEmail() && passwordStr.isValidPassword()
-            self?.submitBtn.isEnabled = isValid
-            self?.submitBtnBG.alpha = isValid ? 1 : 0.5
+            if(self?.submitBtn != nil){
+                let isValid = emailStr.trim().isValidEmail() && passwordStr.isValidPassword() && selectedCountryData.name != nil
+                self?.submitBtn.isEnabled = isValid
+                self?.submitBtn.alpha = isValid ? 1 : 0.5
+            }
         }).subscribe().disposed(by: disposeBag)
         
+    }
+    
+    func buttonCreate(){
+        submitBtn = TransitionSubmitButton(frame: CGRect(x: 0, y: 0, width: self.submitBtnBG.frame.size.width, height: self.submitBtnBG.frame.size.height))
+        submitBtn.center = submitBtn.center
+        submitBtn.layer.cornerRadius = submitBtn.frame.height / 2
+        submitBtn.backgroundColor = UIColor.white
+        submitBtn.setTitle("SUBMIT", for: UIControl.State())
+        submitBtn.setTitleColor(UIColor.init(named: "login-center-bg"), for: .normal)
+        submitBtn.titleLabel?.font = UIFont(name: "Verdana-Bold", size: 16)
+        submitBtn.spinnerColor = UIColor.init(named: "login-center-bg") ?? .lightGray
+        submitBtn.addTarget(self, action: #selector(submitBtnAction), for: UIControl.Event.touchUpInside)
+        submitBtnBG.addSubview(submitBtn)
     }
     
     @IBAction func passwordHideShowBtn(_ sender: UIButton) {
@@ -87,6 +102,17 @@ class LoginVC: BaseViewController {
         navController.isNavigationBarHidden = true
         navController.modalPresentationStyle = .overCurrentContext
         self.present(navController, animated: true, completion: nil)
+    }
+    
+    @objc func submitBtnAction(_ sender: UIButton){
+        if(loginModel.isValidForm()){
+            submitBtn.animate(1, completion: { () -> () in
+                let container = UIStoryboard(storyboard: .dashboard).instantiateViewController(identifier: "DashboardVC")
+                container.transitioningDelegate = self
+                container.modalPresentationStyle = .fullScreen
+                self.present(container, animated: true, completion: nil)
+            })
+        }
     }
 
 }
@@ -112,6 +138,18 @@ extension LoginVC: UITextFieldDelegate {
             break
         }
         return true
+    }
+    
+}
+
+extension LoginVC: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return FadeInAnimator(transitionDuration: 0.5, startingAlpha: 0.8)
+    }
+       
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return nil
     }
     
 }
