@@ -16,6 +16,8 @@
 		CACFB6E3294B45F000013C4C /* ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACFB6E2294B45F000013C4C /* ChallengeTests.swift */; };
 		CACFB6ED294B45F000013C4C /* ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACFB6EC294B45F000013C4C /* ChallengeUITests.swift */; };
 		CACFB6EF294B45F000013C4C /* ChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACFB6EE294B45F000013C4C /* ChallengeUITestsLaunchTests.swift */; };
+		CACFB706294B520100013C4C /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACFB705294B520100013C4C /* RoundedView.swift */; };
+		CACFB708294B567100013C4C /* UITextField+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACFB707294B567100013C4C /* UITextField+EXT.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		CACFB6E8294B45F000013C4C /* ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CACFB6EC294B45F000013C4C /* ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeUITests.swift; sourceTree = "<group>"; };
 		CACFB6EE294B45F000013C4C /* ChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CACFB705294B520100013C4C /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		CACFB707294B567100013C4C /* UITextField+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+EXT.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 		CACFB6CA294B45EF00013C4C /* Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				CACFB704294B51EA00013C4C /* Custom Classes */,
+				CACFB703294B51E100013C4C /* Extenstion */,
 				CACFB701294B483800013C4C /* Utils */,
 				CACFB700294B483300013C4C /* Common */,
 				CACFB6FF294B482100013C4C /* ServiceLayer */,
@@ -181,6 +187,22 @@
 			children = (
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		CACFB703294B51E100013C4C /* Extenstion */ = {
+			isa = PBXGroup;
+			children = (
+				CACFB707294B567100013C4C /* UITextField+EXT.swift */,
+			);
+			path = Extenstion;
+			sourceTree = "<group>";
+		};
+		CACFB704294B51EA00013C4C /* Custom Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CACFB705294B520100013C4C /* RoundedView.swift */,
+			);
+			path = "Custom Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +336,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CACFB706294B520100013C4C /* RoundedView.swift in Sources */,
+				CACFB708294B567100013C4C /* UITextField+EXT.swift in Sources */,
 				CACFB6D0294B45EF00013C4C /* ViewController.swift in Sources */,
 				CACFB6CC294B45EF00013C4C /* AppDelegate.swift in Sources */,
 				CACFB6CE294B45EF00013C4C /* SceneDelegate.swift in Sources */,
