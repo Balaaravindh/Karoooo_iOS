@@ -11,5 +11,8 @@ import RxCocoa
 
 class LoginRepository: BaseRepository {
     
+    func getMasterData() -> Observable<Any>{
+        return self.apiManager.getDashboardData()
+    }
     
 }

@@ -21,8 +21,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yCV-u0-tmW">
                                 <rect key="frame" x="0.0" y="59" width="393" height="45"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKs-tG-DX2">
-                                        <rect key="frame" x="20" y="5" width="97" height="35"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Aravindh!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKs-tG-DX2">
+                                        <rect key="frame" x="20" y="5" width="139" height="35"/>
                                         <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -64,7 +64,19 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lsf-WU-ggW" customClass="RoundedView" customModule="Challenge" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="109" width="393" height="743"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWK-R7-onV">
+                                        <rect key="frame" x="25" y="25" width="343" height="20"/>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="16"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="BWK-R7-onV" secondAttribute="trailing" constant="25" id="IgV-q0-AzL"/>
+                                    <constraint firstItem="BWK-R7-onV" firstAttribute="top" secondItem="lsf-WU-ggW" secondAttribute="top" constant="25" id="JgC-Sa-cpQ"/>
+                                    <constraint firstItem="BWK-R7-onV" firstAttribute="leading" secondItem="lsf-WU-ggW" secondAttribute="leading" constant="25" id="niP-NN-sL0"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isTopRadius" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

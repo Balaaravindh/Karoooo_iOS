@@ -52,6 +52,9 @@ class DependencyInjector {
             LoginViewModel(baseRepository: r.resolve(LoginRepository.self)!)
         }.inObjectScope(ObjectScope.container)
         
+        container.register(DashboardViewModel.self) { r in
+            DashboardViewModel(baseRepository: r.resolve(LoginRepository.self)!)
+        }.inObjectScope(ObjectScope.container)
     
     }
     

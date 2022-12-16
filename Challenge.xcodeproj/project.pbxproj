@@ -10,6 +10,8 @@
 		4F692B10393F08C0B6555FB2 /* Pods_Challenge_ChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F9B8234A08623B2DA55AD4 /* Pods_Challenge_ChallengeUITests.framework */; };
 		6A11C880869CF1AB100C7033 /* Pods_ChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E6081F8669A19740D06ED0 /* Pods_ChallengeTests.framework */; };
 		C8A9FD3340BC0C51E5D8A092 /* Pods_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD05BAA6E4823DA12C2A6A0 /* Pods_Challenge.framework */; };
+		CA30AFC9294C625800EC2FE2 /* DashboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA30AFC8294C625800EC2FE2 /* DashboardModel.swift */; };
+		CA30AFCB294C630800EC2FE2 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA30AFCA294C630800EC2FE2 /* DashboardViewModel.swift */; };
 		CACFB6CC294B45EF00013C4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACFB6CB294B45EF00013C4C /* AppDelegate.swift */; };
 		CACFB6CE294B45EF00013C4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACFB6CD294B45EF00013C4C /* SceneDelegate.swift */; };
 		CACFB6D0294B45EF00013C4C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACFB6CF294B45EF00013C4C /* LoginVC.swift */; };
@@ -72,6 +74,8 @@
 		9A89FC87E7F2EEA01435D85A /* Pods-Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge.debug.xcconfig"; path = "Target Support Files/Pods-Challenge/Pods-Challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		9D053E9D00F88A8615A5FD86 /* Pods-Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge.release.xcconfig"; path = "Target Support Files/Pods-Challenge/Pods-Challenge.release.xcconfig"; sourceTree = "<group>"; };
 		A8F9B8234A08623B2DA55AD4 /* Pods_Challenge_ChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Challenge_ChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA30AFC8294C625800EC2FE2 /* DashboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardModel.swift; sourceTree = "<group>"; };
+		CA30AFCA294C630800EC2FE2 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		CACFB6C8294B45EF00013C4C /* Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CACFB6CB294B45EF00013C4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CACFB6CD294B45EF00013C4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -246,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				CACFB71D294B6E6E00013C4C /* LoginViewModel.swift */,
+				CA30AFCA294C630800EC2FE2 /* DashboardViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -254,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				CAE6189A294B81E1006F08B6 /* CountriesModel.swift */,
+				CA30AFC8294C625800EC2FE2 /* DashboardModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -606,6 +612,7 @@
 				CAE618A8294B9C7B006F08B6 /* CGRect+EXT.swift in Sources */,
 				CAE618AA294B9C9C006F08B6 /* Timer.swift in Sources */,
 				CAE618A1294B89E9006F08B6 /* CountryCell.swift in Sources */,
+				CA30AFC9294C625800EC2FE2 /* DashboardModel.swift in Sources */,
 				CACFB720294B7A1300013C4C /* UIString+EXT.swift in Sources */,
 				CACFB71A294B6A0D00013C4C /* PreferenceManager.swift in Sources */,
 				CACFB70E294B63C900013C4C /* BaseViewModel.swift in Sources */,
@@ -613,6 +620,7 @@
 				CACFB716294B691000013C4C /* URLConstants.swift in Sources */,
 				CACFB70C294B638500013C4C /* BaseViewController.swift in Sources */,
 				CACFB6CE294B45EF00013C4C /* SceneDelegate.swift in Sources */,
+				CA30AFCB294C630800EC2FE2 /* DashboardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

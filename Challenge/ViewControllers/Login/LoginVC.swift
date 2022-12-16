@@ -104,7 +104,7 @@ class LoginVC: BaseViewController {
         self.present(navController, animated: true, completion: nil)
     }
     
-    @objc func submitBtnAction(_ sender: UIButton){
+    @objc func submitBtnAction(_ sender: TransitionSubmitButton){
         if(loginModel.isValidForm()){
             submitBtn.animate(1, completion: { () -> () in
                 let container = UIStoryboard(storyboard: .dashboard).instantiateViewController(identifier: "DashboardVC")
@@ -112,6 +112,8 @@ class LoginVC: BaseViewController {
                 container.modalPresentationStyle = .fullScreen
                 self.present(container, animated: true, completion: nil)
             })
+        }else{
+            
         }
     }
 

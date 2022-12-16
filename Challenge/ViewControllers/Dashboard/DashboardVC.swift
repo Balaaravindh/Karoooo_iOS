@@ -9,11 +9,24 @@ import UIKit
 
 class DashboardVC: BaseViewController {
     
+    private var dashboardVM: DashboardViewModel!
+    
+    override func inject() {
+        dashboardVM = DependencyInjector.defaultInjector.getContainer().resolve(DashboardViewModel.self)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        ConsoleLog.d("Sample")
+        dashboardApiCall()
         
+    }
+    
+    func dashboardApiCall(){
+        dashboardVM.getDashboardMasterData(disposeBag: disposeBag){
+            [weak self] (error, isSuccess, message) in
+            
+        }
     }
 
     override func viewDidLoad() {

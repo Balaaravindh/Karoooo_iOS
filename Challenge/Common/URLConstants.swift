@@ -9,7 +9,7 @@ import Foundation
 
 struct URLConstants{
     static func getBaseURL() -> String {
-        let baseURL = "http://172.16.4.22:8173/"
+        let baseURL = "https://jsonplaceholder.typicode.com/"
         return baseURL
     }
     static let url = URLConstants.getBaseURL()

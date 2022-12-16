@@ -118,7 +118,12 @@ class ApiManager {
         }
     }
     
-     
+    //API Call
+    func getDashboardData()  -> Observable<Any>{
+        return requestWith(
+            path: "users",
+            method: .get)
+    }
     
 }
 
