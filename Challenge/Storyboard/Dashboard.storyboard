@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="45"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Aravindh!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKs-tG-DX2">
-                                        <rect key="frame" x="20" y="5" width="139" height="35"/>
+                                        <rect key="frame" x="20" y="5" width="313" height="35"/>
                                         <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -55,6 +55,7 @@
                                     <constraint firstItem="faY-Zv-tjM" firstAttribute="top" secondItem="hEP-WV-lCV" secondAttribute="top" constant="3" id="2FD-0C-AfY"/>
                                     <constraint firstAttribute="bottom" secondItem="NKs-tG-DX2" secondAttribute="bottom" constant="5" id="9av-uk-MlS"/>
                                     <constraint firstItem="faY-Zv-tjM" firstAttribute="trailing" secondItem="hEP-WV-lCV" secondAttribute="trailing" constant="-5" id="BvG-rO-7bg"/>
+                                    <constraint firstItem="hEP-WV-lCV" firstAttribute="leading" secondItem="NKs-tG-DX2" secondAttribute="trailing" constant="10" id="H14-pF-IWk"/>
                                     <constraint firstItem="NKs-tG-DX2" firstAttribute="top" secondItem="yCV-u0-tmW" secondAttribute="top" constant="5" id="M5Y-LQ-2QR"/>
                                     <constraint firstItem="hEP-WV-lCV" firstAttribute="centerY" secondItem="NKs-tG-DX2" secondAttribute="centerY" id="Rbk-15-qwc"/>
                                     <constraint firstItem="NKs-tG-DX2" firstAttribute="leading" secondItem="yCV-u0-tmW" secondAttribute="leading" constant="20" id="Xad-fL-ig9"/>
@@ -70,12 +71,52 @@
                                         <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="16"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XON-Kx-9Iy">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="693"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DashboardCell" rowHeight="200" id="tb1-za-z9N" customClass="DashboardCell" customModule="Challenge" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="393" height="200"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tb1-za-z9N" id="qjD-wP-QjQ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N4u-kp-3eJ">
+                                                            <rect key="frame" x="20" y="10" width="353" height="180"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="10"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="N4u-kp-3eJ" secondAttribute="bottom" constant="10" id="DbJ-vO-S3m"/>
+                                                        <constraint firstItem="N4u-kp-3eJ" firstAttribute="leading" secondItem="qjD-wP-QjQ" secondAttribute="leadingMargin" id="J8N-cu-7gi"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="N4u-kp-3eJ" secondAttribute="trailing" id="mAM-Dn-Nnl"/>
+                                                        <constraint firstItem="N4u-kp-3eJ" firstAttribute="top" secondItem="qjD-wP-QjQ" secondAttribute="top" constant="10" id="y0s-ch-MMy"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="cardView" destination="N4u-kp-3eJ" id="Fwa-6P-SvE"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="XON-Kx-9Iy" secondAttribute="bottom" id="3NJ-zT-mhp"/>
+                                    <constraint firstItem="XON-Kx-9Iy" firstAttribute="top" secondItem="BWK-R7-onV" secondAttribute="bottom" constant="5" id="C52-xf-NTb"/>
                                     <constraint firstAttribute="trailing" secondItem="BWK-R7-onV" secondAttribute="trailing" constant="25" id="IgV-q0-AzL"/>
                                     <constraint firstItem="BWK-R7-onV" firstAttribute="top" secondItem="lsf-WU-ggW" secondAttribute="top" constant="25" id="JgC-Sa-cpQ"/>
-                                    <constraint firstItem="BWK-R7-onV" firstAttribute="leading" secondItem="lsf-WU-ggW" secondAttribute="leading" constant="25" id="niP-NN-sL0"/>
+                                    <constraint firstAttribute="trailing" secondItem="XON-Kx-9Iy" secondAttribute="trailing" id="P3V-5d-JZG"/>
+                                    <constraint firstItem="BWK-R7-onV" firstAttribute="leading" secondItem="lsf-WU-ggW" secondAttribute="leading" constant="25" id="WEI-Px-GAC"/>
+                                    <constraint firstItem="XON-Kx-9Iy" firstAttribute="leading" secondItem="lsf-WU-ggW" secondAttribute="leading" id="dr2-B2-JGh"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isTopRadius" value="YES"/>
@@ -83,7 +124,7 @@
                                         <real key="value" value="40"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColos">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="value" systemColor="systemGray6Color"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -100,10 +141,13 @@
                             <constraint firstItem="lsf-WU-ggW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="s61-p1-xz7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dashboardListTableView" destination="XON-Kx-9Iy" id="mtf-l1-r1u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="31" y="4"/>
+            <point key="canvasLocation" x="29.770992366412212" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
@@ -113,6 +157,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

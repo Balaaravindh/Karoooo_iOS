@@ -12,6 +12,8 @@
 		C8A9FD3340BC0C51E5D8A092 /* Pods_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD05BAA6E4823DA12C2A6A0 /* Pods_Challenge.framework */; };
 		CA30AFC9294C625800EC2FE2 /* DashboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA30AFC8294C625800EC2FE2 /* DashboardModel.swift */; };
 		CA30AFCB294C630800EC2FE2 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA30AFCA294C630800EC2FE2 /* DashboardViewModel.swift */; };
+		CA30AFCD294C798200EC2FE2 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA30AFCC294C798200EC2FE2 /* CardView.swift */; };
+		CA30AFD1294C7A8900EC2FE2 /* DashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA30AFD0294C7A8900EC2FE2 /* DashboardCell.swift */; };
 		CACFB6CC294B45EF00013C4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACFB6CB294B45EF00013C4C /* AppDelegate.swift */; };
 		CACFB6CE294B45EF00013C4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACFB6CD294B45EF00013C4C /* SceneDelegate.swift */; };
 		CACFB6D0294B45EF00013C4C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACFB6CF294B45EF00013C4C /* LoginVC.swift */; };
@@ -76,6 +78,8 @@
 		A8F9B8234A08623B2DA55AD4 /* Pods_Challenge_ChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Challenge_ChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA30AFC8294C625800EC2FE2 /* DashboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardModel.swift; sourceTree = "<group>"; };
 		CA30AFCA294C630800EC2FE2 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		CA30AFCC294C798200EC2FE2 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		CA30AFD0294C7A8900EC2FE2 /* DashboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCell.swift; sourceTree = "<group>"; };
 		CACFB6C8294B45EF00013C4C /* Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CACFB6CB294B45EF00013C4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CACFB6CD294B45EF00013C4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +170,14 @@
 				6274196DA47363F50598D8ED /* Pods-ChallengeTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CA30AFCF294C7A6E00EC2FE2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CA30AFD0294C7A8900EC2FE2 /* DashboardCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		CACFB6BF294B45EF00013C4C = {
@@ -312,6 +324,7 @@
 			children = (
 				CAE618A4294B9C3C006F08B6 /* TransitionBtn */,
 				CACFB705294B520100013C4C /* RoundedView.swift */,
+				CA30AFCC294C798200EC2FE2 /* CardView.swift */,
 			);
 			path = "Custom Classes";
 			sourceTree = "<group>";
@@ -347,6 +360,7 @@
 		CAE618AD294BA1FC006F08B6 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				CA30AFCF294C7A6E00EC2FE2 /* Cell */,
 				CAE618AE294BA213006F08B6 /* DashboardVC.swift */,
 			);
 			path = Dashboard;
@@ -603,11 +617,13 @@
 				CAE618A3294B9C1E006F08B6 /* TransitionSubmitButton.swift in Sources */,
 				CAE618A6294B9C55006F08B6 /* SpinerLayer.swift in Sources */,
 				CACFB6D0294B45EF00013C4C /* LoginVC.swift in Sources */,
+				CA30AFD1294C7A8900EC2FE2 /* DashboardCell.swift in Sources */,
 				CACFB71C294B6E4800013C4C /* LoginRepository.swift in Sources */,
 				CACFB710294B63F000013C4C /* BaseRepository.swift in Sources */,
 				CACFB6CC294B45EF00013C4C /* AppDelegate.swift in Sources */,
 				CAE6189E294B872A006F08B6 /* SelectCountriesVC.swift in Sources */,
 				CACFB70A294B60DE00013C4C /* UIStoryBoard+EXT.swift in Sources */,
+				CA30AFCD294C798200EC2FE2 /* CardView.swift in Sources */,
 				CAE6189B294B81E1006F08B6 /* CountriesModel.swift in Sources */,
 				CAE618A8294B9C7B006F08B6 /* CGRect+EXT.swift in Sources */,
 				CAE618AA294B9C9C006F08B6 /* Timer.swift in Sources */,

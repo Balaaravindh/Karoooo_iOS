@@ -9,6 +9,8 @@ import UIKit
 
 class DashboardVC: BaseViewController {
     
+    @IBOutlet weak var dashboardListTableView: UITableView!
+    
     private var dashboardVM: DashboardViewModel!
     
     override func inject() {
@@ -18,6 +20,8 @@ class DashboardVC: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        dashboardListTableView.dataSource = self
+        dashboardListTableView.reloadData()
         dashboardApiCall()
         
     }
@@ -34,4 +38,21 @@ class DashboardVC: BaseViewController {
 
     }
 
+}
+
+extension DashboardVC: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DashboardCell", for: indexPath) as! DashboardCell
+        cell.cardView.cardView()
+        return cell
+    }
+    
+    
+    
+    
 }
